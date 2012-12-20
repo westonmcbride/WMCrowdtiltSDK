@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "AFNetworkActivityIndicatorManager.h"
+#import "CrowdtiltTestAPIClient.h"
 
 @implementation AppDelegate
 
@@ -125,5 +126,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
     return _persistentStoreCoordinator;
 }
+
 
 @end

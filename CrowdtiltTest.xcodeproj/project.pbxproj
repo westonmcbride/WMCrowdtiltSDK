@@ -21,9 +21,19 @@
 		7CB2D3FE16813FCB002656E9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB2D3FD16813FCB002656E9 /* Default-568h@2x.png */; };
 		7CB2D40216813FCB002656E9 /* CrowdtiltTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D40016813FCB002656E9 /* CrowdtiltTest.xcdatamodeld */; };
 		7CB2D40516813FCB002656E9 /* CrowdtiltTestIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D40416813FCB002656E9 /* CrowdtiltTestIncrementalStore.m */; };
+		7CB2D44B168144D5002656E9 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D440168144D5002656E9 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CB2D44C168144D5002656E9 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D442168144D5002656E9 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CB2D44D168144D5002656E9 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D444168144D5002656E9 /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CB2D44E168144D5002656E9 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D446168144D5002656E9 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CB2D44F168144D5002656E9 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D448168144D5002656E9 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CB2D450168144D5002656E9 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D44A168144D5002656E9 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CE2A7AC16837FE4009F963C /* WMServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE2A7AB16837FE4009F963C /* WMServerManager.m */; };
+		CD8F42009B4E4382AFD1771B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5E7564417C4BDD80E9560D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18BE5D9A82EE46E9A110C409 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		7C5E7564417C4BDD80E9560D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB2D3DB16813FCB002656E9 /* CrowdtiltTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdtiltTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB2D3DF16813FCB002656E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7CB2D3E116813FCB002656E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +54,21 @@
 		7CB2D40116813FCB002656E9 /* CrowdtiltTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CrowdtiltTest.xcdatamodel; sourceTree = "<group>"; };
 		7CB2D40316813FCB002656E9 /* CrowdtiltTestIncrementalStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CrowdtiltTestIncrementalStore.h; path = Classes/CrowdtiltTestIncrementalStore.h; sourceTree = "<group>"; };
 		7CB2D40416813FCB002656E9 /* CrowdtiltTestIncrementalStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CrowdtiltTestIncrementalStore.m; path = Classes/CrowdtiltTestIncrementalStore.m; sourceTree = "<group>"; };
+		7CB2D43E168144D5002656E9 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		7CB2D43F168144D5002656E9 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		7CB2D440168144D5002656E9 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		7CB2D441168144D5002656E9 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		7CB2D442168144D5002656E9 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		7CB2D443168144D5002656E9 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		7CB2D444168144D5002656E9 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		7CB2D445168144D5002656E9 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		7CB2D446168144D5002656E9 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		7CB2D447168144D5002656E9 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		7CB2D448168144D5002656E9 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		7CB2D449168144D5002656E9 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		7CB2D44A168144D5002656E9 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		7CE2A7AA16837FE4009F963C /* WMServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMServerManager.h; sourceTree = "<group>"; };
+		7CE2A7AB16837FE4009F963C /* WMServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMServerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +80,7 @@
 				7CB2D3E216813FCB002656E9 /* Foundation.framework in Frameworks */,
 				7CB2D3E416813FCB002656E9 /* CoreGraphics.framework in Frameworks */,
 				7CB2D3E616813FCB002656E9 /* CoreData.framework in Frameworks */,
+				CD8F42009B4E4382AFD1771B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +93,7 @@
 				7CB2D3E716813FCB002656E9 /* CrowdtiltTest */,
 				7CB2D3DE16813FCB002656E9 /* Frameworks */,
 				7CB2D3DC16813FCB002656E9 /* Products */,
+				18BE5D9A82EE46E9A110C409 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +112,7 @@
 				7CB2D3E116813FCB002656E9 /* Foundation.framework */,
 				7CB2D3E316813FCB002656E9 /* CoreGraphics.framework */,
 				7CB2D3E516813FCB002656E9 /* CoreData.framework */,
+				7C5E7564417C4BDD80E9560D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,6 +133,7 @@
 		7CB2D3EA16813FCB002656E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7CB2D451168144DC002656E9 /* SBJSON */,
 				7CB2D3EB16813FCB002656E9 /* CrowdtiltTest-Prefix.pch */,
 				7CB2D3F016813FCB002656E9 /* CrowdtiltTest-Info.plist */,
 				7CB2D3F116813FCB002656E9 /* InfoPlist.strings */,
@@ -119,6 +148,8 @@
 		7CB2D3EC16813FCB002656E9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				7CE2A7AA16837FE4009F963C /* WMServerManager.h */,
+				7CE2A7AB16837FE4009F963C /* WMServerManager.m */,
 				7CB2D3ED16813FCB002656E9 /* CrowdtiltTestAPIClient.h */,
 				7CB2D3EE16813FCB002656E9 /* CrowdtiltTestAPIClient.m */,
 				7CB2D40316813FCB002656E9 /* CrowdtiltTestIncrementalStore.h */,
@@ -135,6 +166,26 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		7CB2D451168144DC002656E9 /* SBJSON */ = {
+			isa = PBXGroup;
+			children = (
+				7CB2D43E168144D5002656E9 /* JSON.h */,
+				7CB2D43F168144D5002656E9 /* NSObject+SBJSON.h */,
+				7CB2D440168144D5002656E9 /* NSObject+SBJSON.m */,
+				7CB2D441168144D5002656E9 /* NSString+SBJSON.h */,
+				7CB2D442168144D5002656E9 /* NSString+SBJSON.m */,
+				7CB2D443168144D5002656E9 /* SBJSON.h */,
+				7CB2D444168144D5002656E9 /* SBJSON.m */,
+				7CB2D445168144D5002656E9 /* SBJsonBase.h */,
+				7CB2D446168144D5002656E9 /* SBJsonBase.m */,
+				7CB2D447168144D5002656E9 /* SBJsonParser.h */,
+				7CB2D448168144D5002656E9 /* SBJsonParser.m */,
+				7CB2D449168144D5002656E9 /* SBJsonWriter.h */,
+				7CB2D44A168144D5002656E9 /* SBJsonWriter.m */,
+			);
+			name = SBJSON;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +196,7 @@
 				7CB2D3D716813FCB002656E9 /* Sources */,
 				7CB2D3D816813FCB002656E9 /* Frameworks */,
 				7CB2D3D916813FCB002656E9 /* Resources */,
+				DBFD912230D444459712E88E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +248,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DBFD912230D444459712E88E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7CB2D3D716813FCB002656E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -206,6 +275,13 @@
 				7CB2D3F816813FCB002656E9 /* AppDelegate.m in Sources */,
 				7CB2D40216813FCB002656E9 /* CrowdtiltTest.xcdatamodeld in Sources */,
 				7CB2D40516813FCB002656E9 /* CrowdtiltTestIncrementalStore.m in Sources */,
+				7CB2D44B168144D5002656E9 /* NSObject+SBJSON.m in Sources */,
+				7CB2D44C168144D5002656E9 /* NSString+SBJSON.m in Sources */,
+				7CB2D44D168144D5002656E9 /* SBJSON.m in Sources */,
+				7CB2D44E168144D5002656E9 /* SBJsonBase.m in Sources */,
+				7CB2D44F168144D5002656E9 /* SBJsonParser.m in Sources */,
+				7CB2D450168144D5002656E9 /* SBJsonWriter.m in Sources */,
+				7CE2A7AC16837FE4009F963C /* WMServerManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +351,7 @@
 		};
 		7CB2D40916813FCB002656E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18BE5D9A82EE46E9A110C409 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrowdtiltTest/CrowdtiltTest-Prefix.pch";
@@ -286,6 +363,7 @@
 		};
 		7CB2D40A16813FCB002656E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18BE5D9A82EE46E9A110C409 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrowdtiltTest/CrowdtiltTest-Prefix.pch";
@@ -314,6 +392,7 @@
 				7CB2D40A16813FCB002656E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

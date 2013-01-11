@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UITableViewController
+#import "AFNetworking.h"
+#import "WMServerManager.h"
+
+@interface RootViewController : UITableViewController <WMCrowdTiltDelegateProtocol>
 
 @property NSManagedObjectContext *managedObjectContext;
 

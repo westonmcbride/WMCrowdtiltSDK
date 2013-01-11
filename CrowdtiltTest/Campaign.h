@@ -10,4 +10,9 @@
 
 @interface Campaign : NSManagedObject
 
+@property NSString *title;
+@property NSDate *createdAt;
+
+@property (nonatomic, getter = isCompleted) BOOL completed;
+
 @end

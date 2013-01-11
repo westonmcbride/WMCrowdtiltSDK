@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C16D36816908BBA00864FD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C16D36716908BBA00864FD7 /* SystemConfiguration.framework */; };
+		7C3723E5169A708C000890C6 /* Campaign.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3723E4169A708C000890C6 /* Campaign.m */; };
+		7C8B980B169A25F900F2FEE9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8B980A169A25F900F2FEE9 /* RootViewController.m */; };
 		7CB2D3E016813FCB002656E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB2D3DF16813FCB002656E9 /* UIKit.framework */; };
 		7CB2D3E216813FCB002656E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB2D3E116813FCB002656E9 /* Foundation.framework */; };
 		7CB2D3E416813FCB002656E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB2D3E316813FCB002656E9 /* CoreGraphics.framework */; };
@@ -28,12 +31,18 @@
 		7CB2D44F168144D5002656E9 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D448168144D5002656E9 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CB2D450168144D5002656E9 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D44A168144D5002656E9 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CE2A7AC16837FE4009F963C /* WMServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE2A7AB16837FE4009F963C /* WMServerManager.m */; };
+		7CF46308169BC66900632930 /* bobafacebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7CF46307169BC66900632930 /* bobafacebook.jpg */; };
 		CD8F42009B4E4382AFD1771B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5E7564417C4BDD80E9560D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18BE5D9A82EE46E9A110C409 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		7C16D36716908BBA00864FD7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7C3723E3169A708C000890C6 /* Campaign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Campaign.h; sourceTree = "<group>"; };
+		7C3723E4169A708C000890C6 /* Campaign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Campaign.m; sourceTree = "<group>"; };
 		7C5E7564417C4BDD80E9560D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C8B9809169A25F900F2FEE9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = Classes/RootViewController.h; sourceTree = "<group>"; };
+		7C8B980A169A25F900F2FEE9 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = Classes/RootViewController.m; sourceTree = "<group>"; };
 		7CB2D3DB16813FCB002656E9 /* CrowdtiltTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdtiltTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB2D3DF16813FCB002656E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7CB2D3E116813FCB002656E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,6 +78,7 @@
 		7CB2D44A168144D5002656E9 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		7CE2A7AA16837FE4009F963C /* WMServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMServerManager.h; sourceTree = "<group>"; };
 		7CE2A7AB16837FE4009F963C /* WMServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMServerManager.m; sourceTree = "<group>"; };
+		7CF46307169BC66900632930 /* bobafacebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bobafacebook.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C16D36816908BBA00864FD7 /* SystemConfiguration.framework in Frameworks */,
 				7CB2D3E016813FCB002656E9 /* UIKit.framework in Frameworks */,
 				7CB2D3E216813FCB002656E9 /* Foundation.framework in Frameworks */,
 				7CB2D3E416813FCB002656E9 /* CoreGraphics.framework in Frameworks */,
@@ -108,6 +119,7 @@
 		7CB2D3DE16813FCB002656E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C16D36716908BBA00864FD7 /* SystemConfiguration.framework */,
 				7CB2D3DF16813FCB002656E9 /* UIKit.framework */,
 				7CB2D3E116813FCB002656E9 /* Foundation.framework */,
 				7CB2D3E316813FCB002656E9 /* CoreGraphics.framework */,
@@ -123,6 +135,8 @@
 				7CB2D3E816813FCB002656E9 /* Podfile */,
 				7CB2D3F616813FCB002656E9 /* AppDelegate.h */,
 				7CB2D3F716813FCB002656E9 /* AppDelegate.m */,
+				7C8B9809169A25F900F2FEE9 /* RootViewController.h */,
+				7C8B980A169A25F900F2FEE9 /* RootViewController.m */,
 				7CB2D3EC16813FCB002656E9 /* Networking */,
 				7CB2D3FF16813FCB002656E9 /* Models */,
 				7CB2D3EA16813FCB002656E9 /* Supporting Files */,
@@ -133,6 +147,7 @@
 		7CB2D3EA16813FCB002656E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7CF46307169BC66900632930 /* bobafacebook.jpg */,
 				7CB2D451168144DC002656E9 /* SBJSON */,
 				7CB2D3EB16813FCB002656E9 /* CrowdtiltTest-Prefix.pch */,
 				7CB2D3F016813FCB002656E9 /* CrowdtiltTest-Info.plist */,
@@ -162,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				7CB2D40016813FCB002656E9 /* CrowdtiltTest.xcdatamodeld */,
+				7C3723E3169A708C000890C6 /* Campaign.h */,
+				7C3723E4169A708C000890C6 /* Campaign.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -243,6 +260,7 @@
 				7CB2D3FA16813FCB002656E9 /* Default.png in Resources */,
 				7CB2D3FC16813FCB002656E9 /* Default@2x.png in Resources */,
 				7CB2D3FE16813FCB002656E9 /* Default-568h@2x.png in Resources */,
+				7CF46308169BC66900632930 /* bobafacebook.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +300,8 @@
 				7CB2D44F168144D5002656E9 /* SBJsonParser.m in Sources */,
 				7CB2D450168144D5002656E9 /* SBJsonWriter.m in Sources */,
 				7CE2A7AC16837FE4009F963C /* WMServerManager.m in Sources */,
+				7C8B980B169A25F900F2FEE9 /* RootViewController.m in Sources */,
+				7C3723E5169A708C000890C6 /* Campaign.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

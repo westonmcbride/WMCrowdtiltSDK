@@ -35,31 +35,33 @@ static NSString * const kCrowdtiltAPISecret = @"49c54a6f3752ddacad8e1d0e3b390660
 #pragma mark - AFIncrementalStore
 
 - (id)representationOrArrayOfRepresentationsFromResponseObject:(id)responseObject {
-    return responseObject;
+    return [responseObject objectForKey:@"campaigns"];
 }
 
 - (NSDictionary *)attributesForRepresentation:(NSDictionary *)representation 
                                      ofEntity:(NSEntityDescription *)entity 
                                  fromResponse:(NSHTTPURLResponse *)response 
 {
-    NSMutableDictionary *mutablePropertyValues = [[super attributesForRepresentation:representation ofEntity:entity fromResponse:response] mutableCopy];
+//   	NSLog(@"attributes: %@, %@, %@", representation, entity, response);
+	
+	NSMutableDictionary *mutablePropertyValues = [[super attributesForRepresentation:representation ofEntity:entity fromResponse:response] mutableCopy];
     
-    // Customize the response object to fit the expected attribute keys and values  
-    
+    //**** Customize the response object to fit the expected attribute keys and values
+	
     return mutablePropertyValues;
 }
 
 - (BOOL)shouldFetchRemoteAttributeValuesForObjectWithID:(NSManagedObjectID *)objectID
                                  inManagedObjectContext:(NSManagedObjectContext *)context
 {
-    return NO;
+    return [[[objectID entity] name] isEqualToString:@"Campaign"];
 }
 
 - (BOOL)shouldFetchRemoteValuesForRelationship:(NSRelationshipDescription *)relationship
                                forObjectWithID:(NSManagedObjectID *)objectID
                         inManagedObjectContext:(NSManagedObjectContext *)context
 {
-    return NO;
+    return [[[objectID entity] name] isEqualToString:@"Campaign"];
 }
 
 @end

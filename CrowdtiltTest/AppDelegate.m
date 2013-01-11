@@ -11,6 +11,9 @@
 #import "AFNetworkActivityIndicatorManager.h"
 #import "CrowdtiltTestAPIClient.h"
 
+#import "WMServerManager.h"
+#import "RootViewController.h"
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -24,9 +27,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [NSURLCache setSharedURLCache:URLCache];
     
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
-    
-    UIViewController *viewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+	
+	RootViewController *rootVC = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
+	rootVC.managedObjectContext = self.managedObjectContext;
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:rootVC];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navigationController;
@@ -34,6 +38,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

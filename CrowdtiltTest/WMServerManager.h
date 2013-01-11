@@ -10,10 +10,22 @@
 #import "CrowdtiltTestAPIClient.h"
 #import "JSON.h"
 
+@protocol WMCrowdTiltDelegateProtocol <NSObject>
+
+- (void)updateCampaignArrayWithArray:(NSArray *)array;
+- (void)updateUserArrayWithArray:(NSArray *)array;
+- (void)returnSuccessfulPOSTWithRequest:(NSDictionary *)dict;
+
+@end
+
 @interface WMServerManager : NSObject
 
 + (WMServerManager *)getServerManager;
 
-- (void)callServerWithParameters:(NSDictionary *)parameterDict;
+- (void)postUserWithDict:(NSDictionary *)dict;
+- (void)postCampaignWithDict:(NSDictionary *)dict;
+
+- (void)getUsersWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
+- (void)getCampaignsWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
 
 @end

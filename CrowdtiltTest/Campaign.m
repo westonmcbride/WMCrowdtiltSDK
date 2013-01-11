@@ -10,4 +10,17 @@
 
 @implementation Campaign
 
+@dynamic title;
+@dynamic createdAt;
+
+- (BOOL)isCompleted
+{
+	return self.createdAt != nil;
+}
+
+- (void)setCompleted:(BOOL)completed
+{
+	self.createdAt = completed ? [NSDate date] : nil;
+}
+
 @end

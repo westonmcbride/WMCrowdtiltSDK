@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "CrowdtiltTestIncrementalStore.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, NSURLConnectionDelegate, NSURLConnectionDownloadDelegate, NSURLConnectionDataDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

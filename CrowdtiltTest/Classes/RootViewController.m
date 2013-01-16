@@ -7,20 +7,15 @@
 //
 
 #import "RootViewController.h"
-#import "CrowdtiltTestAPIClient.h"
 
-@interface RootViewController () <NSFetchedResultsControllerDelegate>
+@interface RootViewController ()
 
-@property NSFetchedResultsController *fetchedResultsController;
-
-@property NSArray *resultsArray;
 @property NSDictionary *APIDict;
 
 @end
 
 @implementation RootViewController
 
-@synthesize resultsArray;
 @synthesize APIDict;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -40,8 +35,6 @@
 	
 	NSArray *userAPI = [NSArray arrayWithObjects:
 						@"/users GET",
-						@"/users POST",
-						@"/users/authentication GET",
 						nil];
 		
 	NSArray *campaignAPI = [NSArray arrayWithObjects:
@@ -58,20 +51,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-#pragma mark - Crowdtilt delegate methods
-- (void)updateCampaignArrayWithArray:(NSArray *)array
-{
-	self.resultsArray = array;
-	[self.tableView reloadData];
-}
-
-- (void)updateUserArrayWithArray:(NSArray *)array
-{
-	self.resultsArray = array;
-	[self.tableView reloadData];
 }
 
 #pragma mark - Table view data source

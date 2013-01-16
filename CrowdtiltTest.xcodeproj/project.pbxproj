@@ -32,6 +32,7 @@
 		7CB2D450168144D5002656E9 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D44A168144D5002656E9 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CE2A7AC16837FE4009F963C /* WMServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE2A7AB16837FE4009F963C /* WMServerManager.m */; };
 		7CF46308169BC66900632930 /* bobafacebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7CF46307169BC66900632930 /* bobafacebook.jpg */; };
+		7CFD172716A6225E00A394D9 /* APIDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD172616A6225E00A394D9 /* APIDetailViewController.m */; };
 		CD8F42009B4E4382AFD1771B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5E7564417C4BDD80E9560D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,8 @@
 		7CE2A7AA16837FE4009F963C /* WMServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMServerManager.h; sourceTree = "<group>"; };
 		7CE2A7AB16837FE4009F963C /* WMServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMServerManager.m; sourceTree = "<group>"; };
 		7CF46307169BC66900632930 /* bobafacebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bobafacebook.jpg; sourceTree = "<group>"; };
+		7CFD172516A6225E00A394D9 /* APIDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIDetailViewController.h; sourceTree = "<group>"; };
+		7CFD172616A6225E00A394D9 /* APIDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				7CB2D3F716813FCB002656E9 /* AppDelegate.m */,
 				7C8B9809169A25F900F2FEE9 /* RootViewController.h */,
 				7C8B980A169A25F900F2FEE9 /* RootViewController.m */,
+				7CFD172516A6225E00A394D9 /* APIDetailViewController.h */,
+				7CFD172616A6225E00A394D9 /* APIDetailViewController.m */,
 				7CB2D3EC16813FCB002656E9 /* Networking */,
 				7CB2D3FF16813FCB002656E9 /* Models */,
 				7CB2D3EA16813FCB002656E9 /* Supporting Files */,
@@ -302,6 +307,7 @@
 				7CE2A7AC16837FE4009F963C /* WMServerManager.m in Sources */,
 				7C8B980B169A25F900F2FEE9 /* RootViewController.m in Sources */,
 				7C3723E5169A708C000890C6 /* Campaign.m in Sources */,
+				7CFD172716A6225E00A394D9 /* APIDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

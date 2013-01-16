@@ -12,16 +12,16 @@
 @interface RootViewController () <NSFetchedResultsControllerDelegate>
 
 @property NSFetchedResultsController *fetchedResultsController;
-@property NSString *cellTitleText; 
 
 @property NSArray *resultsArray;
+@property NSDictionary *APIDict;
 
 @end
 
 @implementation RootViewController
 
 @synthesize resultsArray;
-@synthesize cellTitleText;
+@synthesize APIDict;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,16 +36,22 @@
 {
     [super viewDidLoad];
 	
-	self.title = @"tweets";
+	self.title = @"Crowdtilt API";
 	
-	self.cellTitleText = @"title";
-	
-	[[WMServerManager getServerManager] getCampaignsWithDelegate:self];
-	
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(postCampaign)];
-	
-	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Users" style:UIBarButtonItemStyleBordered target:self action:@selector(switchToUser)];
+	NSArray *userAPI = [NSArray arrayWithObjects:
+						@"/users GET",
+						@"/users POST",
+						@"/users/authentication GET",
+						nil];
 		
+	NSArray *campaignAPI = [NSArray arrayWithObjects:
+						@"/campaigns GET",
+						nil];
+	
+	self.APIDict = [NSDictionary dictionaryWithObjectsAndKeys:
+							 userAPI, @"/user",
+							 campaignAPI, @"/campaign",
+							 nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,14 +59,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)switchToUser
-{
-	[[WMServerManager getServerManager] getUsersWithDelegate:self];
-	
-	self.cellTitleText = @"firstname";	
-}
-
 
 
 #pragma mark - Crowdtilt delegate methods
@@ -80,13 +78,22 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return self.APIDict.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.resultsArray.count;
+	NSString *string = [[self.APIDict allKeys] objectAtIndex:section];
+	NSArray *array = [self.APIDict objectForKey:string];
+    return array.count;
 }
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	NSString *string = [[self.APIDict allKeys] objectAtIndex:section];
+	return string;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -102,124 +109,29 @@
 		cell.detailTextLabel.backgroundColor = cell.textLabel.backgroundColor;
     }
 	
-	NSDictionary *campaign = [self.resultsArray objectAtIndex:indexPath.row];
+	NSString *string = [[self.APIDict allKeys] objectAtIndex:indexPath.section];
+	NSArray *array = [self.APIDict objectForKey:string];
+	cell.textLabel.text = [array objectAtIndex:indexPath.row];
 	
-	cell.textLabel.text = [campaign objectForKey:cellTitleText];
-	cell.detailTextLabel.text = [campaign objectForKey:@"creation_date"];
-	
-//	NSString *imageURL = [campaign objectForKey:@"img"];
-//	[cell.imageView setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"bobafacebook.jpg"]];
-	
-//	[self configureCell:cell forRowAtIndexPath:indexPath];
-    
     return cell;
 }
 
-- (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-	cell.textLabel.text = [managedObject valueForKey:@"title"];
-}
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+	NSString *string = [[self.APIDict allKeys] objectAtIndex:indexPath.section];
+	NSArray *array = [self.APIDict objectForKey:string];
+	NSString *selectedAPICall = [array objectAtIndex:indexPath.row];
+	
+	APIDetailViewController *detailVC = [[APIDetailViewController alloc] initWithAPICall:selectedAPICall];
+	[self.navigationController pushViewController:detailVC animated:YES];
 }
 
 #pragma mark - NSFetchedResultsControllerDelegate
 
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-    [self.tableView beginUpdates];
-}
-
-- (void)controller:(NSFetchedResultsController *)controller
-  didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
-           atIndex:(NSUInteger)sectionIndex
-     forChangeType:(NSFetchedResultsChangeType)type
-{
-    switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]    withRowAnimation:UITableViewRowAnimationAutomatic];
-            break;
-        case NSFetchedResultsChangeDelete:
-            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]    withRowAnimation:UITableViewRowAnimationAutomatic];
-            break;
-    }
-}
-
-- (void)controller:(NSFetchedResultsController *)controller
-   didChangeObject:(id)object
-       atIndexPath:(NSIndexPath *)indexPath
-     forChangeType:(NSFetchedResultsChangeType)type
-      newIndexPath:(NSIndexPath *)newIndexPath
-{
-    switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]     withRowAnimation:UITableViewRowAnimationAutomatic];
-            break;
-        case NSFetchedResultsChangeDelete:
-            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]    withRowAnimation:UITableViewRowAnimationAutomatic];
-            break;
-        case NSFetchedResultsChangeUpdate:
-            [self configureCell:[self.tableView cellForRowAtIndexPath:indexPath] forRowAtIndexPath:indexPath];
-            break;
-        case NSFetchedResultsChangeMove:
-            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]    withRowAnimation:UITableViewRowAnimationAutomatic];
-            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]     withRowAnimation:UITableViewRowAnimationAutomatic];
-            break;
-    }
-}
-
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    [self.tableView endUpdates];
-}
 
 
 //// Demo JSON request:

@@ -22,9 +22,11 @@
 
 + (WMServerManager *)getServerManager;
 
+// Post methods with dictionaries
 - (void)postUserWithDict:(NSDictionary *)dict;
 - (void)postCampaignWithDict:(NSDictionary *)dict;
 
+// List getter methods complete with delegates to refresh View Controllers
 - (void)getUsersWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
 - (void)getCampaignsWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
 

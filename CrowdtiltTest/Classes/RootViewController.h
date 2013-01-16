@@ -10,6 +10,7 @@
 
 #import "AFNetworking.h"
 #import "WMServerManager.h"
+#import "APIDetailViewController.h"
 
 @interface RootViewController : UITableViewController <WMCrowdTiltDelegateProtocol>
 

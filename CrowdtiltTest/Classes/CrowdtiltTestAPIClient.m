@@ -42,7 +42,7 @@ static NSString * const kCrowdtiltAPISecret = @"49c54a6f3752ddacad8e1d0e3b390660
                                      ofEntity:(NSEntityDescription *)entity 
                                  fromResponse:(NSHTTPURLResponse *)response 
 {
-//   	NSLog(@"attributes: %@, %@, %@", representation, entity, response);
+   	//NSLog(@"attributes: %@, %@, %@", representation, entity, response);
 	
 	NSMutableDictionary *mutablePropertyValues = [[super attributesForRepresentation:representation ofEntity:entity fromResponse:response] mutableCopy];
     

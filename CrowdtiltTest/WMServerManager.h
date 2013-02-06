@@ -31,13 +31,14 @@
  
 // POST methods with dictionaries
 // * User
-- (void)postUserWithDict:(NSDictionary *)dict;
+- (void)postUserWithDict:(NSDictionary *)dict; // complete
+- (void)postUserVerificationWithDict:(NSDictionary *)dict;
 - (void)getUserAuthenticationWithDict:(NSDictionary *)dict;
-- (void)postUserCardWithDict:(NSDictionary *)dict;
+- (void)postUserCardWithDict:(NSDictionary *)dict; // complete
 - (void)postUserBankWithDict:(NSDictionary *)dict;
 // * Campaign
-- (void)postCampaignWithDict:(NSDictionary *)dict;
-- (void)postCampaignPaymentWithDict:(NSDictionary *)dict;
+- (void)postCampaignWithDict:(NSDictionary *)dict; // complete
+- (void)postCampaignPaymentWithDict:(NSDictionary *)dict; // complete
 - (void)postCampaignRefundWithDict:(NSDictionary *)dict;
 - (void)postCampaignCommentWithDict:(NSDictionary *)dict;
 
@@ -55,7 +56,7 @@
 // GET methods complete with delegates to refresh View Controllers
 // * User
 - (void)getUsersWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
-- (void)getSingleUserWithDict:(NSDictionary *)dict andWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
+- (void)getSingleUserWithDict:(NSDictionary *)dict andWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate; // complete
 - (void)getUserCampaignsWithDict:(NSDictionary *)dict andWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
 - (void)getUserSingleCampaignWithDict:(NSDictionary *)dict andWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
 - (void)getUserPaidCampaignsWithDict:(NSDictionary *)dict andWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
@@ -67,7 +68,7 @@
 
 // * Campaign
 - (void)getCampaignsWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
-- (void)getSingleCampaignWithDict:(NSDictionary *)dict andWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
+- (void)getSingleCampaignWithDict:(NSDictionary *)dict andWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate; // complete
 - (void)getCampaignSinglePaymentWithDict:(NSDictionary *)dict andWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
 - (void)getCampaignPaymentsWithDict:(NSDictionary *)dict andWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;
 - (void)getCampaignRejectedPaymentsWithDict:(NSDictionary *)dict andWithDelegate:(NSObject <WMCrowdTiltDelegateProtocol>*)delegate;

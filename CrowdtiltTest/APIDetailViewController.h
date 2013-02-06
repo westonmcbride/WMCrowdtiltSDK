@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WMServerManager.h"
 
-@interface APIDetailViewController : UITableViewController <WMCrowdTiltDelegateProtocol>
+@interface APIDetailViewController : UIViewController <WMCrowdTiltDelegateProtocol, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, UITextFieldDelegate>
 
 - (id)initWithAPICall:(NSString *)callString;
 

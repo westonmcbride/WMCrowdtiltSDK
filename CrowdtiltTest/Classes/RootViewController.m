@@ -35,10 +35,14 @@
 	
 	NSArray *userAPI = [NSArray arrayWithObjects:
 						@"/users GET",
+						@"/users POST",
+						@"/users/:id/cards POST",
 						nil];
 		
 	NSArray *campaignAPI = [NSArray arrayWithObjects:
-						@"/campaigns GET",
+							@"/campaigns GET",
+							@"/campaigns POST",
+							@"/campaigns/:id/payments POST",
 						nil];
 	
 	self.APIDict = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -62,15 +66,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	NSString *string = [[self.APIDict allKeys] objectAtIndex:section];
-	NSArray *array = [self.APIDict objectForKey:string];
+	NSString *sectionTitle = [[self.APIDict allKeys] objectAtIndex:section];
+	NSArray *array = [self.APIDict objectForKey:sectionTitle];
     return array.count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-	NSString *string = [[self.APIDict allKeys] objectAtIndex:section];
-	return string;
+	NSString *sectionTitle = [[self.APIDict allKeys] objectAtIndex:section];
+	return sectionTitle;
 }
 
 
@@ -81,6 +85,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+		// cell style customization
 		cell.contentView.backgroundColor = self.tableView.backgroundColor;
 		cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
 		cell.textLabel.textColor = [UIColor darkGrayColor];
@@ -88,21 +93,20 @@
 		cell.detailTextLabel.backgroundColor = cell.textLabel.backgroundColor;
     }
 	
-	NSString *string = [[self.APIDict allKeys] objectAtIndex:indexPath.section];
-	NSArray *array = [self.APIDict objectForKey:string];
+	NSString *sectionTitle = [[self.APIDict allKeys] objectAtIndex:indexPath.section];
+	NSArray *array = [self.APIDict objectForKey:sectionTitle];
 	cell.textLabel.text = [array objectAtIndex:indexPath.row];
 	
     return cell;
 }
 
 
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	NSString *string = [[self.APIDict allKeys] objectAtIndex:indexPath.section];
-	NSArray *array = [self.APIDict objectForKey:string];
+	NSString *sectionTitle = [[self.APIDict allKeys] objectAtIndex:indexPath.section];
+	NSArray *array = [self.APIDict objectForKey:sectionTitle];
 	NSString *selectedAPICall = [array objectAtIndex:indexPath.row];
 	
 	APIDetailViewController *detailVC = [[APIDetailViewController alloc] initWithAPICall:selectedAPICall];

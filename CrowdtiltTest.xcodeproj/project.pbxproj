@@ -24,12 +24,6 @@
 		7CB2D3FE16813FCB002656E9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB2D3FD16813FCB002656E9 /* Default-568h@2x.png */; };
 		7CB2D40216813FCB002656E9 /* CrowdtiltTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D40016813FCB002656E9 /* CrowdtiltTest.xcdatamodeld */; };
 		7CB2D40516813FCB002656E9 /* CrowdtiltTestIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D40416813FCB002656E9 /* CrowdtiltTestIncrementalStore.m */; };
-		7CB2D44B168144D5002656E9 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D440168144D5002656E9 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7CB2D44C168144D5002656E9 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D442168144D5002656E9 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7CB2D44D168144D5002656E9 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D444168144D5002656E9 /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7CB2D44E168144D5002656E9 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D446168144D5002656E9 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7CB2D44F168144D5002656E9 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D448168144D5002656E9 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7CB2D450168144D5002656E9 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2D44A168144D5002656E9 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CE2A7AC16837FE4009F963C /* WMServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE2A7AB16837FE4009F963C /* WMServerManager.m */; };
 		7CF46308169BC66900632930 /* bobafacebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7CF46307169BC66900632930 /* bobafacebook.jpg */; };
 		7CFD172716A6225E00A394D9 /* APIDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD172616A6225E00A394D9 /* APIDetailViewController.m */; };
@@ -64,19 +58,6 @@
 		7CB2D40116813FCB002656E9 /* CrowdtiltTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CrowdtiltTest.xcdatamodel; sourceTree = "<group>"; };
 		7CB2D40316813FCB002656E9 /* CrowdtiltTestIncrementalStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CrowdtiltTestIncrementalStore.h; path = Classes/CrowdtiltTestIncrementalStore.h; sourceTree = "<group>"; };
 		7CB2D40416813FCB002656E9 /* CrowdtiltTestIncrementalStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CrowdtiltTestIncrementalStore.m; path = Classes/CrowdtiltTestIncrementalStore.m; sourceTree = "<group>"; };
-		7CB2D43E168144D5002656E9 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		7CB2D43F168144D5002656E9 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		7CB2D440168144D5002656E9 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
-		7CB2D441168144D5002656E9 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		7CB2D442168144D5002656E9 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
-		7CB2D443168144D5002656E9 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		7CB2D444168144D5002656E9 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
-		7CB2D445168144D5002656E9 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		7CB2D446168144D5002656E9 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
-		7CB2D447168144D5002656E9 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		7CB2D448168144D5002656E9 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
-		7CB2D449168144D5002656E9 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
-		7CB2D44A168144D5002656E9 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		7CE2A7AA16837FE4009F963C /* WMServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMServerManager.h; sourceTree = "<group>"; };
 		7CE2A7AB16837FE4009F963C /* WMServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMServerManager.m; sourceTree = "<group>"; };
 		7CF46307169BC66900632930 /* bobafacebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bobafacebook.jpg; sourceTree = "<group>"; };
@@ -153,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				7CF46307169BC66900632930 /* bobafacebook.jpg */,
-				7CB2D451168144DC002656E9 /* SBJSON */,
 				7CB2D3EB16813FCB002656E9 /* CrowdtiltTest-Prefix.pch */,
 				7CB2D3F016813FCB002656E9 /* CrowdtiltTest-Info.plist */,
 				7CB2D3F116813FCB002656E9 /* InfoPlist.strings */,
@@ -186,26 +166,6 @@
 				7C3723E4169A708C000890C6 /* Campaign.m */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		7CB2D451168144DC002656E9 /* SBJSON */ = {
-			isa = PBXGroup;
-			children = (
-				7CB2D43E168144D5002656E9 /* JSON.h */,
-				7CB2D43F168144D5002656E9 /* NSObject+SBJSON.h */,
-				7CB2D440168144D5002656E9 /* NSObject+SBJSON.m */,
-				7CB2D441168144D5002656E9 /* NSString+SBJSON.h */,
-				7CB2D442168144D5002656E9 /* NSString+SBJSON.m */,
-				7CB2D443168144D5002656E9 /* SBJSON.h */,
-				7CB2D444168144D5002656E9 /* SBJSON.m */,
-				7CB2D445168144D5002656E9 /* SBJsonBase.h */,
-				7CB2D446168144D5002656E9 /* SBJsonBase.m */,
-				7CB2D447168144D5002656E9 /* SBJsonParser.h */,
-				7CB2D448168144D5002656E9 /* SBJsonParser.m */,
-				7CB2D449168144D5002656E9 /* SBJsonWriter.h */,
-				7CB2D44A168144D5002656E9 /* SBJsonWriter.m */,
-			);
-			name = SBJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,12 +258,6 @@
 				7CB2D3F816813FCB002656E9 /* AppDelegate.m in Sources */,
 				7CB2D40216813FCB002656E9 /* CrowdtiltTest.xcdatamodeld in Sources */,
 				7CB2D40516813FCB002656E9 /* CrowdtiltTestIncrementalStore.m in Sources */,
-				7CB2D44B168144D5002656E9 /* NSObject+SBJSON.m in Sources */,
-				7CB2D44C168144D5002656E9 /* NSString+SBJSON.m in Sources */,
-				7CB2D44D168144D5002656E9 /* SBJSON.m in Sources */,
-				7CB2D44E168144D5002656E9 /* SBJsonBase.m in Sources */,
-				7CB2D44F168144D5002656E9 /* SBJsonParser.m in Sources */,
-				7CB2D450168144D5002656E9 /* SBJsonWriter.m in Sources */,
 				7CE2A7AC16837FE4009F963C /* WMServerManager.m in Sources */,
 				7C8B980B169A25F900F2FEE9 /* RootViewController.m in Sources */,
 				7C3723E5169A708C000890C6 /* Campaign.m in Sources */,

@@ -3,8 +3,8 @@
 
 //static NSString * const kCrowdtiltTestAPIBaseURLString = @"http://api.crowdtilt.com/v1/";
 static NSString * const kCrowdtiltTestAPIBaseURLString = @"https://api-sandbox.crowdtilt.com/v1/";
-static NSString * const kCrowdtiltAPIKey = @"f7f43fb9ba85cb486781b66fc6fd8f";
-static NSString * const kCrowdtiltAPISecret = @"49c54a6f3752ddacad8e1d0e3b3906602515a4e5";
+static NSString * const kCrowdtiltAPIKey = @"your key";
+static NSString * const kCrowdtiltAPISecret = @"your secret";
 
 @implementation CrowdtiltTestAPIClient
 

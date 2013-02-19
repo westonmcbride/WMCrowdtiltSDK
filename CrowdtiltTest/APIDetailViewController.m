@@ -237,6 +237,10 @@
 		[resultsTableView reloadData];
 }
 
+- (void)returnSuccessfulPOSTWithRequest:(NSDictionary *)dict
+{
+	// 
+}
 
 #pragma mark - Table view data source
 
